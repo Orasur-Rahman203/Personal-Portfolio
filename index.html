@@ -30,6 +30,56 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script type="text/javascript">
+      function sendEmail2(event) {
+        event.preventDefault();
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const subject = document.getElementById('subject').value;
+        const message = document.getElementById('message').value;
+  
+        Email.send({
+          SecureToken: "cc385802-d508-468e-9e29-da93ac0e03b5",
+          To: 'orasurrahman203@gmail.com',
+          From: "orasurrahman203@gmail.com",
+          Subject: "Email fro",
+          Body: `Name: ${name}
+          \nEmail: ${email}
+          \nSubject: ${subject}
+          \nMessage: ${message}`,
+        })
+          .then(function (message) {
+            console.log(message);
+            Swal.fire({
+              icon: 'success',
+              title: 'Email Sent!',
+              text: 'Your email has been sent successfully.',
+              confirmButtonColor: '#2d2d2d',
+              confirmButtonText: 'OK'
+            }).then((result) => {
+              // Reset the form after successful submission
+              document.getElementById('name').value = '';
+              document.getElementById('email').value = '';
+              document.getElementById('subject').value = '';
+              document.getElementById('message').value = '';
+            });
+          })
+          .catch(function (error) {
+            console.error(error);
+            Swal.fire({
+              icon: 'error',
+              title: 'Oops...',
+              text: 'An error occurred while sending the email.',
+              confirmButtonColor: '#4E4FEB',
+              confirmButtonText: 'OK'
+            });
+          });
+      }
+    </script>
+
+
 </head>
 
 <body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="51">
@@ -62,7 +112,7 @@
             </a>
             <div class="navbar-nav me-auto py-0">
                 <a href="#project" class="nav-item nav-link">Projects</a>
-                <a href="#team" class="nav-item nav-link">Team</a>
+                <!-- <a href="#team" class="nav-item nav-link">Team</a> -->
                 <a href="#testimonial" class="nav-item nav-link">Testimonial</a>
                 <a href="#contact" class="nav-item nav-link">Contact</a>
             </div>
@@ -81,7 +131,7 @@
                     <h2 class="typed-text-output d-inline"></h2>
                     <div class="typed-text d-none">Web Designer, Web Developer, Front End Developer, Back End Developer, Full Stack Developer</div>
                     <div class="d-flex align-items-center pt-5">
-                        <a href="" class="btn btn-primary py-3 px-4 me-5">Download CV</a>
+                        <a href="img/about-1.jpg" class="btn btn-primary py-3 px-4 me-5" download>Download CV</a>
                         <!-- <button type="button" class="btn-play" data-bs-toggle="modal"
                             data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-bs-target="#videoModal">
                             <span></span>
@@ -131,31 +181,34 @@
                         </div>
                         <h3 class="lh-base mb-0">of working experience as a web designer & developer</h3>
                     </div>
-                    <p class="mb-4">Stet no et lorem dolor et diam, amet duo ut dolore vero eos. No stet est diam rebum amet diam ipsum. Clita clita labore, dolor duo nonumy clita sit at, sed sit sanctus dolor eos.</p>
+                    <p class="mb-2">Hello, I'm Md. Orasur Rahman, and I'm passionate about crafting digital experiences that leave a lasting impression. As a dedicated web developer, I thrive on the ever-evolving challenges of the digital landscape, and I'm committed to creating elegant and functional solutions that bring ideas to life on the web.<br/></p>
+                    <h5 style="font-weight: 700;">What I Do</h5>
+                    <p>I specialize in front-end and back-end web development, with a keen eye for design and a deep appreciation for clean, efficient code. Whether it's building responsive websites, developing custom web applications, or optimizing performance, I'm driven by a desire to exceed expectations and deliver results that matter.
+                    </p>
                     <p class="mb-3"><i class="far fa-check-circle text-primary me-3"></i>Afordable Prices</p>
                     <p class="mb-3"><i class="far fa-check-circle text-primary me-3"></i>High Quality Product</p>
                     <p class="mb-3"><i class="far fa-check-circle text-primary me-3"></i>On Time Project Delivery</p>
-                    <a class="btn btn-primary py-3 px-5 mt-3" href="">Read More</a>
+                    <!-- <a class="btn btn-primary py-3 px-5 mt-3" href="">Read More</a> -->
                 </div>
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="row g-3 mb-4">
                         <div class="col-sm-6">
-                            <img class="img-fluid rounded" src="img/about-1.jpg" alt="">
+                            <img class="img-fluid rounded h-100" src="img/about-3.jpg" alt="">
                         </div>
                         <div class="col-sm-6">
-                            <img class="img-fluid rounded" src="img/about-2.jpg" alt="">
+                            <img class="img-fluid rounded h-100" src="img/about-4.jpeg" alt="">
                         </div>
                     </div>
                     <div class="d-flex align-items-center mb-3">
                         <h5 class="border-end pe-3 me-3 mb-0">Happy Clients</h5>
-                        <h2 class="text-primary fw-bold mb-0" data-toggle="counter-up">1234</h2>
+                        <h2 class="text-primary fw-bold mb-0" data-toggle="counter-up">10</h2>
                     </div>
-                    <p class="mb-4">Stet no et lorem dolor et diam, amet duo ut dolore vero eos. No stet est diam amet diam ipsum clita labore dolor duo clita.</p>
+                    <p class="mb-4">I had the pleasure of working with Md. Orasur Rahman on a recent web development project, and I couldn't be happier with the results. From start to finish, Md. Orasur demonstrated exceptional professionalism, technical expertise, and a genuine commitment to our project's success.</p>
                     <div class="d-flex align-items-center mb-3">
                         <h5 class="border-end pe-3 me-3 mb-0">Projects Completed</h5>
-                        <h2 class="text-primary fw-bold mb-0" data-toggle="counter-up">1234</h2>
+                        <h2 class="text-primary fw-bold mb-0" data-toggle="counter-up">10</h2>
                     </div>
-                    <p class="mb-0">Stet no et lorem dolor et diam, amet duo ut dolore vero eos. No stet est diam amet diam ipsum clita labore dolor duo clita.</p>
+                    <p class="mb-0">I believe that the project will have a significant positive impact on  Company/Project, and I'm excited to see how it unfolds. It was a pleasure collaborating with you and your team, and I'm confident that this project will contribute to your success.As we move forward, please know that I am here to support you. If you have any questions, need further assistance, or have ideas for future projects, please do not hesitate to reach out.</p>
                 </div>
             </div>
         </div>
@@ -699,34 +752,55 @@
         <div class="container py-5">
             <div class="row g-5 mb-5 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="col-lg-6">
-                    <h1 class="display-5 mb-0">Let's Work Together</h1>
+                    <h3 class="display-5 mb-0">Let's Work Together</h3>
                 </div>
                 <div class="col-lg-6 text-lg-end">
-                    <a class="btn btn-primary py-3 px-5" href="">Say Hello</a>
+                    <p class="btn btn-primary py-3 px-5">Contact With Me</p>
                 </div>
             </div>
             <div class="row g-5">
                 <div class="col-lg-5 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <p class="mb-2">My office:</p>
-                    <h3 class="fw-bold">Gulshan-1, house-1, road-23</h3>
+                    <h5 class="fw-bold">Gulshan-1, house-1, road-23</h5>
                     <hr class="w-100">
                     <p class="mb-2">Call me:</p>
-                    <h3 class="fw-bold">+0801773921617</h3>
+                    <h5 class="fw-bold">+0801773921617</h5>
                     <hr class="w-100">
                     <p class="mb-2">Mail me:</p>
-                    <h3 class="fw-bold">orasurrahman203@gmail.com</h3>
+                    <h5 class="fw-bold">info@gmail.com</h5>
                     <hr class="w-100">
                     <p class="mb-2">Follow me:</p>
                     <div class="d-flex pt-2">
-                        <a class="btn btn-square btn-primary me-2" href=""><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-square btn-primary me-2" href=""><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-square btn-primary me-2" href=""><i class="fab fa-youtube"></i></a>
-                        <a class="btn btn-square btn-primary me-2" terget="_blank" href="https://www.linkedin.com/in/md-orasur-rahman-9a0441260/"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-square btn-primary me-2" href="" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-square btn-primary me-2" href="" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <!-- <a class="btn btn-square btn-primary me-2" href="" target="_blank"><i class="fab fa-youtube"></i></a> -->
+                        <a class="btn btn-square btn-primary me-2" target="_blank" href="https://www.linkedin.com/in/md-orasur-rahman-9a0441260/"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-7 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <p class="mb-4">The contact form is currently inactive. Get a functional and working contact form with Ajax & PHP in a few minutes. Just copy and paste the files, add a little code and you're done. <a href="https://htmlcodex.com/contact-form">Download Now</a>.</p>
-                    <form>
+                    <!-- <p class="mb-4">The contact form is currently inactive. Get a functional and working contact form with Ajax & PHP in a few minutes. Just copy and paste the files, add a little code and you're done. <a href="https://htmlcodex.com/contact-form">Download Now</a>.</p> -->
+                    <!-- <div class="col-lg-8 mt-5 mt-lg-0"> -->
+                        <form role="form" class="php-email-form" onsubmit="sendEmail2(event)">
+                          <div class="row">
+                            <div class="col-md-6 form-group">
+                              <input type="text" name="name" class="form-control p-3" id="name" placeholder="Your Name" required>
+                            </div>
+                            <div class="col-md-6 form-group mt-3 mt-md-0">
+                              <input type="email" class="form-control p-3" name="email" id="email" placeholder="Your Email" required>
+                            </div>
+                          </div>
+                          <div class="form-group mt-3">
+                            <input type="text" class="form-control p-3" name="subject" id="subject" placeholder="Subject" required>
+                          </div>
+                          <div class="form-group my-3">
+                            <textarea class="form-control" name="message" id="message" rows="5" placeholder="Message"
+                              required></textarea>
+                          </div>
+                          <div class="text-center"><button type="submit" class="btn btn-primary py-3 px-5">Send Message</button></div>
+                        </form>
+                      <!-- </div> -->
+                    
+                    <!-- <form>
                         <div class="row g-3">
                             <div class="col-md-6">
                                 <div class="form-floating">
@@ -756,7 +830,7 @@
                                 <button class="btn btn-primary py-3 px-5" type="submit">Send Message</button>
                             </div>
                         </div>
-                    </form>
+                    </form> -->
                 </div>
             </div>
         </div>
@@ -768,10 +842,11 @@
     <div class="container-xxl pt-5 px-0 wow fadeInUp" data-wow-delay="0.1s">
         <div class="container-xxl pt-5 px-0">
             <div class="bg-dark">
-                <iframe
+                <!-- <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3001156.4288297426!2d-78.01371936852176!3d42.72876761954724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4ccc4bf0f123a5a9%3A0xddcfc6c1de189567!2sNew%20York%2C%20USA!5e0!3m2!1sen!2sbd!4v1603794290143!5m2!1sen!2sbd"
                 frameborder="0" style="width: 100%; height: 450px; border:0;" allowfullscreen="" aria-hidden="false"
-                tabindex="0"></iframe>
+                tabindex="0"></iframe> -->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.030643604692!2d90.4160159!3d23.78192309999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c79e955d3d5b%3A0xa2d7c2ed9ece8f78!2sProgress%20Tower%2C%20House%20%23%203%20Rd%2023%2C%20Dhaka%201212!5e0!3m2!1sen!2sbd!4v1695272393625!5m2!1sen!2sbd" style="width: 100%; height: 450px; border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
     </div>
@@ -783,12 +858,14 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        &copy; <a class="border-bottom text-secondary" href="#">Your Site Name</a>, All Right Reserved.
+                        <!-- &copy; <a class="border-bottom text-secondary" href="#">Your Site Name</a>, All Right Reserved. -->
+                        © 2023 Copyright <span style="font-weight: 700;">DeveLopeR.</span> All Rights Reserved
                     </div>
                     <div class="col-md-6 text-center text-md-end">
                         <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                        Designed By <a class="border-bottom text-secondary" href="https://htmlcodex.com">HTML Codex</a>
-                        <br>Distributed By: <a class="border-bottom" href="https://themewagon.com" target="_blank">ThemeWagon</a>
+                        <p>Designed By <span style="font-weight: 700;">MD. ORASUR RAHMAN</span></p>
+                        <!-- <a class="border-bottom text-secondary" href="https://htmlcodex.com">MD. ORASUR RAHMAN</a> -->
+                        <!-- Distributed By: <a class="border-bottom" href="https://themewagon.com" target="_blank">ThemeWagon</a> -->
                     </div>
                 </div>
             </div>
