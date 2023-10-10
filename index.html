@@ -80,6 +80,24 @@
     </script>
 
 
+<style>
+        .portfolioPhoto{
+            width: 400px;
+            margin: auto auto;
+        }
+        .portfolioPhoto img{
+            width: 100%;
+            height: 100%;
+            align-items: center;
+            transition: all 1s;
+        }
+        .portfolioPhoto:hover img{
+             transform: scale(1.2);
+            /* border-radius: 500px; */
+        }
+</style>
+
+
 </head>
 
 <body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="51">
@@ -130,8 +148,14 @@
                     <h1 class="display-3 mb-3">Md Orasur Rahman Hasan</h1>
                     <h2 class="typed-text-output d-inline"></h2>
                     <div class="typed-text d-none">Web Designer, Web Developer, Front End Developer, Back End Developer, Full Stack Developer</div>
-                    <div class="d-flex align-items-center pt-5">
-                        <a href="img/about-1.jpg" class="btn btn-primary py-3 px-4 me-5" download>Download CV</a>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-square btn-primary me-3" href="https://twitter.com/home" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-square btn-primary me-3" href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <!-- <a class="btn btn-square btn-primary me-2" href="" target="_blank"><i class="fab fa-youtube"></i></a> -->
+                        <a class="btn btn-square btn-primary me-3" target="_blank" href="https://www.linkedin.com/in/md-orasur-rahman-9a0441260/"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                    <div class="d-flex align-items-center pt-2"> 
+                        <a href="img/orasur rahman.pdf" class="btn btn-primary py-3 px-4 me-5" download>Download CV</a>
                         <!-- <button type="button" class="btn-play" data-bs-toggle="modal"
                             data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-bs-target="#videoModal">
                             <span></span>
@@ -139,7 +163,7 @@
                         <h5 class="ms-4 mb-0 d-none d-sm-block">Play Video</h5> -->
                     </div>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-6 portfolioPhoto">
                     <img class="img-fluid" src="img/profilePhoto.png" alt="">
                 </div>
             </div>
@@ -771,15 +795,13 @@
                     <hr class="w-100">
                     <p class="mb-2">Follow me:</p>
                     <div class="d-flex pt-2">
-                        <a class="btn btn-square btn-primary me-2" href="https://twitter.com/home" target="_blank"><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-square btn-primary me-2" href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-square btn-primary me-3" href="https://twitter.com/home" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-square btn-primary me-3" href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
                         <!-- <a class="btn btn-square btn-primary me-2" href="" target="_blank"><i class="fab fa-youtube"></i></a> -->
-                        <a class="btn btn-square btn-primary me-2" target="_blank" href="https://www.linkedin.com/in/md-orasur-rahman-9a0441260/"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-square btn-primary me-3" target="_blank" href="https://www.linkedin.com/in/md-orasur-rahman-9a0441260/"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-7 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <!-- <p class="mb-4">The contact form is currently inactive. Get a functional and working contact form with Ajax & PHP in a few minutes. Just copy and paste the files, add a little code and you're done. <a href="https://htmlcodex.com/contact-form">Download Now</a>.</p> -->
-                    <!-- <div class="col-lg-8 mt-5 mt-lg-0"> -->
                         <form role="form" class="php-email-form" onsubmit="sendEmail2(event)">
                           <div class="row">
                             <div class="col-md-6 form-group">
@@ -842,10 +864,6 @@
     <div class="container-xxl pt-5 px-0 wow fadeInUp" data-wow-delay="0.1s">
         <div class="container-xxl pt-5 px-0">
             <div class="bg-dark">
-                <!-- <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3001156.4288297426!2d-78.01371936852176!3d42.72876761954724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4ccc4bf0f123a5a9%3A0xddcfc6c1de189567!2sNew%20York%2C%20USA!5e0!3m2!1sen!2sbd!4v1603794290143!5m2!1sen!2sbd"
-                frameborder="0" style="width: 100%; height: 450px; border:0;" allowfullscreen="" aria-hidden="false"
-                tabindex="0"></iframe> -->
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.030643604692!2d90.4160159!3d23.78192309999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c79e955d3d5b%3A0xa2d7c2ed9ece8f78!2sProgress%20Tower%2C%20House%20%23%203%20Rd%2023%2C%20Dhaka%201212!5e0!3m2!1sen!2sbd!4v1695272393625!5m2!1sen!2sbd" style="width: 100%; height: 450px; border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
@@ -862,10 +880,7 @@
                         © 2023 Copyright <span style="font-weight: 700;">DeveLopeR.</span> All Rights Reserved
                     </div>
                     <div class="col-md-6 text-center text-md-end">
-                        <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
                         <p>Designed By <span style="font-weight: 700;">MD. ORASUR RAHMAN</span></p>
-                        <!-- <a class="border-bottom text-secondary" href="https://htmlcodex.com">MD. ORASUR RAHMAN</a> -->
-                        <!-- Distributed By: <a class="border-bottom" href="https://themewagon.com" target="_blank">ThemeWagon</a> -->
                     </div>
                 </div>
             </div>
@@ -875,7 +890,11 @@
 
 
     <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top">
+        <i class="bi bi-arrow-up"></i>
+        <i class="fas fa-arrow-up"></i>
+        <!-- <i class="fa-duotone fa-arrow-up-square-triangle"></i> -->
+    </a>
 
 
     <!-- JavaScript Libraries -->
